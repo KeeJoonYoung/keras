@@ -12,11 +12,11 @@ print(x.shape, y.shape) # (150, 4) (150,) \\\\\\\뒤에거가 (150,3)이 되고
 ## 원핫인코딩 OneHotEncoding
 from tensorflow.keras.utils import to_categorical
 
-print(y[145:])
-y= to_categorical(y)
-print(y[145:]) # 숫자를 안넣으면 끝까지이다
-# print(y[:5])
-# print(y[:5])의 결과 위의 두개를 비교
+print(y[145:]) # [2 2 2 2 2]
+y= to_categorical(y) 
+print(y[145:]) # 숫자를 안넣으면 끝까지이다 # [[0. 0. 1.] [0. 0. 1.] [0. 0. 1.] [0. 0. 1.] [0. 0. 1.]]
+print(y[:5]) # [[1. 0. 0.] [1. 0. 0.] [1. 0. 0.] [1. 0. 0.] [1. 0. 0.]]
+# print(y[:5])의 결과와 위의 두개를 비교
 # 원핫인코딩은 (150,)를 (150,3)로 바꿔주는거다
 
 
